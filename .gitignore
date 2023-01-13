@@ -1,0 +1,4 @@
+__pycache__
+.direnv
+/state_dir
+/game_dir
