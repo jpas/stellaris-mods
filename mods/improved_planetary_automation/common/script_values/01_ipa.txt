@@ -1,0 +1,22 @@
+scripted_modifier_add_mult = {
+	base = 0
+	add = modifier:$MODIFIER$_add
+	mult = value:scripted_modifier_mult|MODIFIER|$MODIFIER$_mult|
+}
+ipa_planet_free_amenities_target = {
+	base = 0
+	add = value:scripted_modifier_add_mult|MODIFIER|planet_amenities|
+	add = value:scripted_modifier_add_mult|MODIFIER|planet_amenities_no_happiness|
+	subtract = trigger:free_amenities
+	modifier = {
+		not = {
+			has_planet_flag = ipa_target_high_amenities
+		}
+		mult = 0.05
+	}
+	ceiling = yes
+}
+ipa_planet_free_amenities_target_high = {
+	base = 10
+	add = value:ipa_planet_free_amenities_target
+}

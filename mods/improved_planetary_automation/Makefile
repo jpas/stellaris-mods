@@ -7,8 +7,9 @@ game_dir = ${HOME}/.local/share/Steam/steamapps/common/Stellaris
 
 mkdir = @mkdir -p
 
-build: ./mod/build.py
+descriptor.mod: ./src/build.py
 	python $<
+	touch descriptor.mod
 
 install: all
 	$(mkdir) $(state_dir)/mod
@@ -18,4 +19,4 @@ install: all
 tail-logs:
 	@tail -f $(state_dir)/logs/error.log $(state_dir)/logs/game.log
 
-all: build
+all: descriptor.mod

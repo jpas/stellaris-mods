@@ -1,9 +1,90 @@
-planet_automation_research = { }
-planet_automation_unity = { }
-planet_automation_trade_value = { }
-planet_automation_alloys = { }
-planet_automation_consumer_goods = { }
-planet_automation_energy = { }
-planet_automation_minerals = { }
-planet_automation_food = { }
+planet_automation_deficit_restriction = { }
+planet_automation_upgrade_buildings = { }
+ipa_category_research = { }
+ipa_category_unity = { }
+ipa_category_trade_value = {
+	available = {
+		owner = {
+			is_gestalt = no
+		}
+	}
+}
+ipa_category_rare_resources = { }
+ipa_category_alloys = { }
+ipa_category_consumer_goods = { }
+ipa_category_energy = { }
+ipa_category_minerals = { }
+ipa_category_food = { }
+ipa_category_military = { }
+ipa_category_manage_crime = { }
+ipa_category_manage_amenities = {
+	available = {
+		log = "- \\[This.GetName]"
+		log = "- ipa_planet_free_amenities_target = \\[This.ipa_planet_free_amenities_target]"
+		log = "- ipa_planet_amenities = \\[This.ipa_planet_amenities]"
+		log = "- ipa_planet_amenities_no_happiness = \\[This.ipa_planet_amenities_no_happiness]"
+	}
+}
+ipa_category_manage_bio_trophy = {
+	available = {
+		owner = {
+			has_valid_civic = civic_machine_servitor
+		}
+	}
+}
+ipa_category_pop_assembly_biological = { }
+ipa_category_pop_assembly_robotic = { }
+ipa_category_monument = { }
+ipa_category_dread_encampment = {
+	available = {
+		owner = {
+			has_valid_civic = civic_reanimated_armies
+		}
+	}
+}
+ipa_category_gene_clinic = {
+	available = {
+		owner = {
+			is_gestalt = no
+		}
+	}
+}
+ipa_category_noble_estates = {
+	available = {
+		owner = {
+			has_valid_civic = civic_aristocratic_elite
+		}
+	}
+}
+ipa_category_posthumous_employment_center = {
+	available = {
+		owner = {
+			has_valid_civic = civic_permanent_employment
+		}
+	}
+}
+ipa_category_psi_corps = {
+	available = {
+		owner = {
+			or = {
+				has_ascension_perk = ap_mind_over_matter
+				has_origin = origin_shroudwalker_apprentice
+			}
+		}
+	}
+}
+ipa_category_toxic_baths = {
+	available = {
+		owner = {
+			or = {
+				has_valid_civic = civic_toxic_baths
+				has_valid_civic = civic_corporate_toxic_baths
+				has_valid_civic = civic_hive_toxic_baths
+				has_valid_civic = civic_machine_toxic_baths
+			}
+		}
+	}
+}
 planet_automation_clear_blockers = { }
+ipa_category_building_slots = { }
+ipa_category_housing = { }

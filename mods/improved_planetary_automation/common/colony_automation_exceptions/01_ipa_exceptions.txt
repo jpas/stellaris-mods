@@ -1,0 +1,485 @@
+ipa_automate_pop_assembly_biological_offspring = {
+	category = "ipa_category_pop_assembly_biological"
+	emergency = yes
+	available = {
+		owner = {
+			has_origin = origin_progenitor_hive
+		}
+	}
+	buildings = {
+		x = {
+			building = building_offspring_nest
+		}
+	}
+}
+ipa_automate_manage_bio_trophy_housing = {
+	category = "ipa_category_manage_bio_trophy"
+	emergency = yes
+	available = {
+		owner = {
+			has_valid_civic = civic_machine_servitor
+		}
+		nor = {
+			has_building = building_organic_sanctuary
+			has_building = building_organic_paradise
+			has_district = district_hab_cultural
+			has_district = district_arcology_organic_housing
+		}
+	}
+	prio_districts = {
+		district_hab_cultural
+		district_arcology_organic_housing
+	}
+	buildings = {
+		x = {
+			building = building_organic_sanctuary
+			upgrade_trigger = {
+				always = no
+			}
+		}
+	}
+}
+ipa_automate_volatile_motes_deficit = {
+	category = "ipa_category_rare_resources"
+	empire_wide_emergency = yes
+	available = {
+		owner = {
+			has_monthly_income = {
+				resource = volatile_motes
+				value < 3
+			}
+		}
+	}
+	buildings = {
+		x = {
+			building = building_mote_harvesters
+		}
+		x = {
+			building = building_chemical_plant
+		}
+	}
+}
+ipa_automate_exotic_gases_deficit = {
+	category = "ipa_category_rare_resources"
+	empire_wide_emergency = yes
+	available = {
+		owner = {
+			has_monthly_income = {
+				resource = exotic_gases
+				value < 3
+			}
+		}
+	}
+	buildings = {
+		x = {
+			building = building_gas_extractors
+		}
+		x = {
+			building = building_refinery
+		}
+	}
+}
+ipa_automate_rare_crystals_deficit = {
+	category = "ipa_category_rare_resources"
+	empire_wide_emergency = yes
+	available = {
+		owner = {
+			has_monthly_income = {
+				resource = rare_crystals
+				value < 3
+			}
+		}
+	}
+	buildings = {
+		x = {
+			building = building_crystal_mines
+		}
+		x = {
+			building = building_crystal_plant
+		}
+	}
+}
+ipa_automate_upgrade_capital = {
+	category = "planet_automation_upgrade_buildings"
+	emergency = yes
+	available = {
+		owner = {
+			is_gestalt = no
+		}
+	}
+	buildings = {
+		x = {
+			building = building_colony_shelter
+		}
+		x = {
+			building = building_resort_capital
+		}
+		x = {
+			building = building_slave_capital
+		}
+	}
+}
+ipa_automate_upgrade_capital_hive = {
+	category = "planet_automation_upgrade_buildings"
+	emergency = yes
+	available = {
+		owner = {
+			is_hive_empire = yes
+		}
+	}
+	buildings = {
+		x = {
+			building = building_hive_capital
+		}
+	}
+}
+ipa_automate_upgrade_capital_machine = {
+	category = "planet_automation_upgrade_buildings"
+	emergency = yes
+	available = {
+		owner = {
+			is_machine_empire = yes
+		}
+	}
+	buildings = {
+		x = {
+			building = building_deployment_post
+		}
+	}
+}
+ipa_automate_upgrade_capital_habitat = {
+	category = "planet_automation_upgrade_buildings"
+	emergency = yes
+	buildings = {
+		x = {
+			building = building_hab_capital
+		}
+	}
+}
+ipa_automate_manage_crime = {
+	category = "ipa_category_manage_crime"
+	emergency = yes
+	available = {
+		owner = {
+			is_gestalt = no
+		}
+	}
+	buildings = {
+		x = {
+			building = building_precinct_house
+			available = {
+				planet_crime > 30
+				nor = {
+					has_available_jobs = enforcer
+					has_forbidden_jobs = enforcer
+				}
+			}
+			upgrade_trigger = {
+				planet_crime > 30
+				nor = {
+					has_available_jobs = enforcer
+					has_forbidden_jobs = enforcer
+				}
+			}
+		}
+	}
+	job_changes = {
+		x = {
+			job = enforcer
+			amount = 1
+			available = {
+				planet_crime > 27
+			}
+		}
+		x = {
+			job = enforcer
+			amount = -1
+			available = {
+				planet_crime < 1
+			}
+		}
+	}
+}
+ipa_automate_manage_crime_gestalt = {
+	category = "ipa_category_manage_crime"
+	emergency = yes
+	available = {
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	buildings = {
+		x = {
+			building = building_sentinel_posts
+			available = {
+				planet_crime > 30
+				nor = {
+					has_available_jobs = patrol_drone
+					has_forbidden_jobs = patrol_drone
+				}
+			}
+		}
+	}
+	job_changes = {
+		x = {
+			job = patrol_drone
+			amount = 1
+			available = {
+				planet_crime >= 27
+			}
+		}
+		x = {
+			job = patrol_drone
+			amount = -1
+			available = {
+				planet_crime < 1
+			}
+		}
+	}
+}
+ipa_automate_posthumous_employment_center = {
+	category = "ipa_category_posthumous_employment_center"
+	emergency = yes
+	available = {
+		owner = {
+			has_valid_civic = civic_permanent_employment
+		}
+	}
+	buildings = {
+		x = {
+			building = building_posthumous_employment_center
+		}
+	}
+}
+ipa_automate_pop_assembly_biological = {
+	category = "ipa_category_pop_assembly_biological"
+	emergency = yes
+	buildings = {
+		x = {
+			building = building_spawning_pool
+		}
+		x = {
+			building = building_clone_vats
+		}
+	}
+}
+ipa_automate_pop_assembly_robotic = {
+	category = "ipa_category_pop_assembly_robotic"
+	emergency = yes
+	buildings = {
+		x = {
+			building = building_machine_assembly_plant
+		}
+		x = {
+			building = building_robot_assembly_plant
+		}
+	}
+}
+ipa_automate_manage_amenities = {
+	category = "ipa_category_manage_amenities"
+	emergency = yes
+	available = {
+		log = "- \\[This.GetName]"
+		log = "- ipa_planet_free_amenities_target = \\[This.ipa_planet_free_amenities_target]"
+		log = "- ipa_planet_amenities = \\[This.ipa_planet_amenities]"
+		log = "- ipa_planet_amenities_no_happiness = \\[This.ipa_planet_amenities_no_happiness]"
+		owner = {
+			is_gestalt = no
+		}
+		nor = {
+			has_available_jobs = entertainer
+			has_forbidden_jobs = entertainer
+		}
+		free_amenities <= value:ipa_planet_free_amenities_target
+	}
+	buildings = {
+		x = {
+			building = building_holo_theatres
+		}
+	}
+}
+ipa_automate_manage_amenities_gestalt = {
+	category = "ipa_category_manage_amenities"
+	emergency = yes
+	available = {
+		log = "- \\[This.GetName]"
+		log = "- ipa_planet_free_amenities_target = \\[This.ipa_planet_free_amenities_target]"
+		log = "- ipa_planet_amenities = \\[This.ipa_planet_amenities]"
+		log = "- ipa_planet_amenities_no_happiness = \\[This.ipa_planet_amenities_no_happiness]"
+		owner = {
+			is_gestalt = yes
+		}
+		nor = {
+			has_available_jobs = maintenance_drone
+			has_forbidden_jobs = maintenance_drone
+		}
+		free_amenities <= value:ipa_planet_free_amenities_target
+	}
+	prio_districts = {
+		district_hab_housing
+		district_arcology_housing
+		district_rw_nexus
+		district_city
+		district_hive
+		district_nexus
+	}
+}
+ipa_automate_housing = {
+	category = "ipa_category_housing"
+	emergency = yes
+	available = {
+		free_housing < 0
+	}
+	prio_districts = {
+		district_hab_housing
+		district_arcology_housing
+		district_rw_nexus
+		district_city
+		district_hive
+		district_nexus
+	}
+}
+ipa_automate_building_slots = {
+	category = "ipa_category_building_slots"
+	emergency = yes
+	available = {
+		free_building_slots < 1
+		num_buildings = {
+			type = any
+			value < 12
+		}
+	}
+	prio_districts = {
+		district_city
+		district_hive
+		district_nexus
+	}
+}
+ipa_automate_idyllic_bloom = {
+	category = "planet_automation_upgrade_buildings"
+	emergency = yes
+	available = {
+		owner = {
+			or = {
+				has_valid_civic = civic_idyllic_bloom
+				has_valid_civic = civic_hive_idyllic_bloom
+			}
+		}
+	}
+	buildings = {
+		x = {
+			building = building_gaiaseeders_1
+			available = {
+				always = no
+			}
+			upgrade_trigger = {
+				always = yes
+			}
+		}
+	}
+}
+ipa_automate_noble_estates = {
+	category = "ipa_category_noble_estates"
+	emergency = yes
+	available = {
+		owner = {
+			has_valid_civic = civic_aristocratic_elite
+		}
+	}
+	buildings = {
+		x = {
+			building = building_noble_estates
+		}
+	}
+}
+ipa_automate_psi_corps = {
+	category = "ipa_category_psi_corps"
+	emergency = yes
+	available = {
+		owner = {
+			or = {
+				has_ascension_perk = ap_mind_over_matter
+				has_origin = origin_shroudwalker_apprentice
+			}
+		}
+	}
+	buildings = {
+		x = {
+			building = building_psi_corps
+		}
+	}
+}
+ipa_automate_dread_encampment = {
+	category = "ipa_category_dread_encampment"
+	emergency = yes
+	available = {
+		owner = {
+			has_valid_civic = civic_reanimated_armies
+		}
+	}
+	buildings = {
+		x = {
+			building = building_dread_encampment
+		}
+	}
+}
+ipa_automate_monument = {
+	category = "ipa_category_monument"
+	emergency = yes
+	buildings = {
+		x = {
+			building = building_autochthon_monument
+		}
+		x = {
+			building = building_corporate_monument
+		}
+		x = {
+			building = building_simulation_1
+		}
+		x = {
+			building = building_sensorium_1
+		}
+		x = {
+			building = building_galactic_memorial_1
+		}
+	}
+}
+ipa_automate_toxic_baths = {
+	category = "ipa_category_toxic_baths"
+	emergency = yes
+	available = {
+		owner = {
+			or = {
+				has_valid_civic = civic_toxic_baths
+				has_valid_civic = civic_corporate_toxic_baths
+				has_valid_civic = civic_hive_toxic_baths
+				has_valid_civic = civic_machine_toxic_baths
+			}
+		}
+	}
+	buildings = {
+		x = {
+			building = building_toxic_bath
+		}
+		x = {
+			building = building_toxic_bath_hive
+		}
+		x = {
+			building = building_toxic_bath_machine
+		}
+	}
+}
+ipa_automate_gene_clinic = {
+	category = "ipa_category_gene_clinic"
+	emergency = yes
+	available = {
+		owner = {
+			is_gestalt = no
+		}
+	}
+	buildings = {
+		x = {
+			building = building_clinic
+		}
+	}
+}

@@ -1,0 +1,109 @@
+defined_text = {
+	name = GetAmenitiesIcon
+	random = no
+	text = {
+		localization_key = amenities_no_happiness_icon
+		trigger = {
+			is_gestalt = yes
+		}
+	}
+	text = {
+		localization_key = amenities_icon
+		trigger = {
+			is_gestalt = no
+		}
+	}
+}
+
+defined_text = {
+	name = ipa_planet_free_amenities_target
+	random = no
+	value = value:ipa_planet_free_amenities_target
+}
+
+defined_text = {
+	name = GetMonument
+	random = no
+	text = {
+		localization_key = building_galactic_memorial_1
+		trigger = {
+			is_memorialist_empire = yes
+		}
+	}
+	text = {
+		localization_key = building_sensorium_1
+		trigger = {
+			is_hive_empire = yes
+		}
+	}
+	text = {
+		localization_key = building_simulation_1
+		trigger = {
+			is_machine_empire = yes
+		}
+	}
+	text = {
+		localization_key = building_corporate_monument
+		trigger = {
+			is_megacorp = yes
+		}
+	}
+	default = building_autochthon_monument
+}
+
+defined_text = {
+	name = GetMonumentJobIcon
+	random = no
+	text = {
+		localization_key = job_culture_worker_icon
+		trigger = {
+			is_gestalt = no
+			is_memorialist_empire = no
+		}
+	}
+	text = {
+		localization_key = job_evaluator_icon
+		trigger = {
+			is_gestalt = yes
+			is_memorialist_empire = no
+		}
+	}
+	text = {
+		localization_key = job_death_chronicler_icon
+		trigger = {
+			is_gestalt = no
+			is_memorialist_empire = yes
+		}
+	}
+	text = {
+		localization_key = job_chronicle_drone_icon
+		trigger = {
+			is_gestalt = yes
+			is_memorialist_empire = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetToxicBathWithJobIcon
+	random = no
+	text = {
+		localization_key = job_bath_attendant_with_icon
+		trigger = {
+			is_gestalt = no
+		}
+	}
+	text = {
+		localization_key = job_bath_attendant_hive_with_icon
+		trigger = {
+			is_hive_empire = yes
+		}
+	}
+	text = {
+		localization_key = job_bath_attendant_machine_with_icon
+		trigger = {
+			is_machine_empire = yes
+		}
+	}
+}
+
