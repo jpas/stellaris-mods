@@ -1,0 +1,3 @@
+can_resettle_pop = { non_free_pop_rights_can_resettle_pop = yes }
+can_country_resettle = { non_free_pop_rights_can_country_resettle = yes }
+can_resettle_planet = { non_free_pop_rights_can_resettle_planet = yes }

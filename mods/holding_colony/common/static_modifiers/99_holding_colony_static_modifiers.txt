@@ -1,0 +1,4 @@
+holding_colony = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_default.dds"
+	icon_frame = 1
+}

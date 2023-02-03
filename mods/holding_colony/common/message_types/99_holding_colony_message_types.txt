@@ -1,0 +1,9 @@
+message_type = {
+	key = "MESSAGE_TYPE_holding_colony_lost"
+	icon = "GFX_message_other_alert"
+	icon_frame = 1
+
+	name = "holding_colony_lost"
+	sound = "notification"
+	ping = "ping_notification_red"
+}

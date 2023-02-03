@@ -1,0 +1,39 @@
+automate_capital_machine_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_capital_machine
+	}
+
+	prio_districts = {
+		district_industrial
+		district_generator
+		district_mining
+	}
+
+	buildings = {
+		1 = {
+			building = building_machine_capital
+		}
+
+		2 = {
+			building = building_foundry_1
+		}
+
+		3 = {
+			building = building_production_center
+		}
+
+		4 = {
+			building = building_energy_grid
+		}
+
+		5 = {
+			building = building_supercomputer
+		}
+
+		6 = {
+			building = building_research_lab_1
+		}
+	}
+}

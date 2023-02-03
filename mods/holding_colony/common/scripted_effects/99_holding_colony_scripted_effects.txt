@@ -1,0 +1,69 @@
+holding_colony_set_resettle_planet_checked = {
+	# this = planet
+	set_saved_date = {
+		key = holding_colony_resettle_planet_checked
+		days_from_present = 0
+		expires = 1
+	}
+}
+
+holding_colony_prevent_resettle_pop = {
+	# this = pop
+	set_saved_date = {
+		key = holding_colony_prevent_resettle_pop
+		days_from_present = 0
+		expires = 1
+	}
+	if = {
+		limit = { is_unemployed = yes }
+		planet = {
+			set_saved_date = {
+				key = holding_colony_prevent_resettle_pop_unemployed
+				days_from_present = 0
+				expires = 1
+			}
+		}
+	}
+}
+
+holding_colony_prevent_resettle_last_key_pops = {
+	# this = planet
+	if = {
+		limit = {
+			exists = growing_species
+		}
+		random_owned_pop = {
+			limit = { is_exact_same_species = prev.growing_species }
+			holding_colony_prevent_resettle_pop = yes
+		}
+	}
+
+	if = {
+		limit = {
+			exists = assembling_species
+			NAND = {
+				exists = growing_species
+				assembling_species = {
+					OR = {
+						is_robotic = yes
+						is_exact_same_species = prev.growing_species
+					}
+				}
+			}
+		}
+		random_owned_pop = {
+			limit = { is_exact_same_species = prev.assembling_species }
+			holding_colony_prevent_resettle_pop = yes
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = { has_planet_flag = holding_colony_prevent_resettle_pop_unemployed }
+		}
+		random_owned_pop = {
+			limit = { is_unemployed = yes }
+			holding_colony_prevent_resettle_pop = yes
+		}
+	}
+}

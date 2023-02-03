@@ -1,0 +1,28 @@
+automate_offspring_nest = {
+	category = "planet_automation_adv_todo"
+	emergency = yes
+
+	available = {
+		exists = owner
+		owner = { has_origin = origin_progenitor_hive }
+	}
+
+	buildings = {
+		x = { building = building_offspring_nest }
+	}
+}
+
+automate_building_capital_upgrade = {
+	category = "planet_automation_adv_todo"
+	emergency = yes
+
+	buildings = {
+		x = { building = building_colony_shelter }
+		x = { building = building_deployment_post }
+		x = { building = building_hab_capital }
+		x = { building = building_hive_capital }
+		x = { building = building_resort_capital }
+		x = { building = building_slave_capital }
+	}
+}
+

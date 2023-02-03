@@ -1,0 +1,44 @@
+decision_holding_colony = {
+	owned_planets_only = yes
+
+	potential = {
+		NOT = { has_modifier = holding_colony }
+	}
+
+	allow = {
+		owner = {
+			NOT = {
+				any_owned_planet = { has_modifier = holding_colony }
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = holding_colony
+		}
+		hidden_effect = {
+			planet_event = { id = holding_colony.1 }
+		}
+	}
+
+	ai_weight = { weight = 0 }
+}
+
+decision_abolish_holding_colony = {
+	owned_planets_only = yes
+	icon = decision_holding_colony
+
+	potential = {
+		has_modifier = holding_colony
+	}
+
+	effect = {
+		remove_modifier = holding_colony
+		hidden_effect = {
+			planet_event = { id = holding_colony.2 }
+		}
+	}
+
+	ai_weight = { weight = 0 }
+}

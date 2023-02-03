@@ -1,0 +1,46 @@
+automate_capital_machine_servitor_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		always = no
+		#has_designation = col_capital_machine
+		#exists = owner
+		#owner = { has_valid_civic = civic_machine_servitor }
+	}
+
+	prio_districts = {
+		district_industrial
+		district_generator
+		district_mining
+	}
+
+	buildings = {
+		1 = {
+			building = building_machine_capital
+		}
+
+		3 = {
+			building = building_foundry_1
+		}
+
+		4 = {
+			building = building_factory_1
+		}
+
+		3 = {
+			building = building_production_center
+		}
+
+		5 = {
+			building = building_energy_grid
+		}
+
+		6 = {
+			building = building_supercomputer
+		}
+
+		7 = {
+			building = building_research_lab_1
+		}
+	}
+}

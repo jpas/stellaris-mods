@@ -1,0 +1,560 @@
+automate_resource_fill_research_fallback_buildings = {
+	category = "planet_automation_research"
+	buildings = {
+		x = {
+			building = building_institute
+		}
+		x = {
+			building = building_supercomputer
+		}
+		x = {
+			building = building_research_lab_1
+			available = {
+				num_free_districts = {
+					type = district_hab_science
+					value = 0
+				}
+				num_free_districts = {
+					type = district_rw_science
+					value = 0
+				}
+			}
+		}
+	}
+}
+automate_resource_fill_unity_fallback_buildings = {
+	category = "planet_automation_unity"
+	buildings = {
+		x = {
+			building = building_autocurating_vault
+		}
+		x = {
+			building = building_corporate_vault
+		}
+		x = {
+			building = building_citadel_of_faith
+		}
+		x = {
+			building = building_alpha_hub
+		}
+		x = {
+			building = building_bureaucratic_1
+			available = {
+				not = {
+					uses_district_set = city_world
+				}
+			}
+		}
+		x = {
+			building = building_sacrificial_temple_1
+			available = {
+				not = {
+					uses_district_set = city_world
+				}
+				owner = {
+					is_death_cult_empire = yes
+				}
+			}
+		}
+		x = {
+			building = building_temple
+			available = {
+				not = {
+					uses_district_set = city_world
+				}
+				owner = {
+					is_death_cult_empire = no
+				}
+			}
+		}
+		x = {
+			building = building_uplink_node
+		}
+		x = {
+			building = building_hive_node
+		}
+	}
+}
+automate_resource_fill_trade_value_fallback_buildings = {
+	category = "planet_automation_trade_value"
+	buildings = {
+		x = {
+			building = building_galactic_stock_exchange
+		}
+		x = {
+			building = building_commercial_zone
+			available = {
+				num_free_districts = {
+					type = district_hab_commercial
+					value = 0
+				}
+				num_free_districts = {
+					type = district_rw_commercial
+					value = 0
+				}
+				num_free_districts = {
+					type = district_srw_commercial
+					value = 0
+				}
+			}
+		}
+	}
+}
+automate_resource_fill_alloys_district_industrial = {
+	category = "planet_automation_alloys"
+	available = {
+		or = {
+			has_district = district_industrial
+			num_free_districts = {
+				type = district_industrial
+				value > 0
+			}
+		}
+		not = {
+			has_designation = col_factory
+		}
+	}
+	prio_districts = {
+		district_industrial
+	}
+	buildings = {
+		x = {
+			building = building_foundry_1
+		}
+		x = {
+			building = building_ministry_production
+		}
+		x = {
+			building = building_production_center
+		}
+	}
+}
+automate_resource_fill_alloys_district_hab_industrial = {
+	category = "planet_automation_alloys"
+	available = {
+		or = {
+			has_district = district_hab_industrial
+			num_free_districts = {
+				type = district_hab_industrial
+				value > 0
+			}
+		}
+		not = {
+			has_designation = col_habitat_factory
+		}
+	}
+	prio_districts = {
+		district_hab_industrial
+	}
+	buildings = {
+		x = {
+			building = building_foundry_1
+		}
+		x = {
+			building = building_ministry_production
+		}
+		x = {
+			building = building_production_center
+		}
+	}
+}
+automate_resource_fill_alloys_district_arcology_arms_industry = {
+	category = "planet_automation_alloys"
+	available = {
+		or = {
+			has_district = district_arcology_arms_industry
+			num_free_districts = {
+				type = district_arcology_arms_industry
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_arcology_arms_industry
+	}
+	buildings = {
+		x = {
+			building = building_foundry_1
+		}
+		x = {
+			building = building_ministry_production
+		}
+		x = {
+			building = building_production_center
+		}
+	}
+}
+automate_resource_fill_alloys_district_rw_industrial = {
+	category = "planet_automation_alloys"
+	available = {
+		or = {
+			has_district = district_rw_industrial
+			num_free_districts = {
+				type = district_rw_industrial
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_rw_industrial
+	}
+	buildings = {
+		x = {
+			building = building_foundry_1
+		}
+		x = {
+			building = building_ministry_production
+		}
+		x = {
+			building = building_production_center
+		}
+	}
+}
+automate_resource_fill_consumer_goods_district_industrial = {
+	category = "planet_automation_consumer_goods"
+	available = {
+		or = {
+			has_district = district_industrial
+			num_free_districts = {
+				type = district_industrial
+				value > 0
+			}
+		}
+		nor = {
+			has_designation = col_foundry
+			has_planet_flag = use_srw_commercial_for_consumer_goods
+		}
+	}
+	prio_districts = {
+		district_industrial
+	}
+	buildings = {
+		x = {
+			building = building_factory_1
+		}
+		x = {
+			building = building_ministry_production
+		}
+		x = {
+			building = building_production_center
+		}
+	}
+}
+automate_resource_fill_consumer_goods_district_hab_industrial = {
+	category = "planet_automation_consumer_goods"
+	available = {
+		or = {
+			has_district = district_hab_industrial
+			num_free_districts = {
+				type = district_hab_industrial
+				value > 0
+			}
+		}
+		not = {
+			has_designation = col_habitat_foundry
+		}
+	}
+	prio_districts = {
+		district_hab_industrial
+	}
+	buildings = {
+		x = {
+			building = building_factory_1
+		}
+		x = {
+			building = building_ministry_production
+		}
+		x = {
+			building = building_production_center
+		}
+	}
+}
+automate_resource_fill_consumer_goods_district_arcology_civilian_industry = {
+	category = "planet_automation_consumer_goods"
+	available = {
+		or = {
+			has_district = district_arcology_civilian_industry
+			num_free_districts = {
+				type = district_arcology_civilian_industry
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_arcology_civilian_industry
+	}
+	buildings = {
+		x = {
+			building = building_factory_1
+		}
+		x = {
+			building = building_ministry_production
+		}
+		x = {
+			building = building_production_center
+		}
+	}
+}
+automate_resource_fill_consumer_goods_district_rw_industrial = {
+	category = "planet_automation_consumer_goods"
+	available = {
+		or = {
+			has_district = district_rw_industrial
+			num_free_districts = {
+				type = district_rw_industrial
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_rw_industrial
+	}
+	buildings = {
+		x = {
+			building = building_factory_1
+		}
+		x = {
+			building = building_ministry_production
+		}
+		x = {
+			building = building_production_center
+		}
+	}
+}
+automate_resource_fill_consumer_goods_district_srw_commercial = {
+	category = "planet_automation_consumer_goods"
+	available = {
+		or = {
+			has_district = district_srw_commercial
+			num_free_districts = {
+				type = district_srw_commercial
+				value > 0
+			}
+		}
+		has_planet_flag = use_srw_commercial_for_consumer_goods
+	}
+	prio_districts = {
+		district_srw_commercial
+	}
+	buildings = {
+		x = {
+			building = building_factory_1
+		}
+		x = {
+			building = building_ministry_production
+		}
+		x = {
+			building = building_production_center
+		}
+	}
+}
+automate_resource_fill_energy_district_generator = {
+	category = "planet_automation_energy"
+	available = {
+		or = {
+			has_district = district_generator
+			num_free_districts = {
+				type = district_generator
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_generator
+	}
+	buildings = {
+		x = {
+			building = building_energy_grid
+		}
+		x = {
+			building = building_waste_reprocessing_center
+		}
+	}
+}
+automate_resource_fill_energy_district_generator_uncapped = {
+	category = "planet_automation_energy"
+	available = {
+		or = {
+			has_district = district_generator_uncapped
+			num_free_districts = {
+				type = district_generator_uncapped
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_generator_uncapped
+	}
+	buildings = {
+		x = {
+			building = building_energy_grid
+		}
+		x = {
+			building = building_waste_reprocessing_center
+		}
+	}
+}
+automate_resource_fill_energy_district_hab_energy = {
+	category = "planet_automation_energy"
+	available = {
+		or = {
+			has_district = district_hab_energy
+			num_free_districts = {
+				type = district_hab_energy
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_hab_energy
+	}
+	buildings = {
+		x = {
+			building = building_energy_grid
+		}
+		x = {
+			building = building_waste_reprocessing_center
+		}
+	}
+}
+automate_resource_fill_minerals_district_mining = {
+	category = "planet_automation_minerals"
+	available = {
+		or = {
+			has_district = district_mining
+			num_free_districts = {
+				type = district_mining
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_mining
+	}
+	buildings = {
+		x = {
+			building = building_mineral_purification_plant
+		}
+	}
+}
+automate_resource_fill_minerals_district_mining_uncapped = {
+	category = "planet_automation_minerals"
+	available = {
+		or = {
+			has_district = district_mining_uncapped
+			num_free_districts = {
+				type = district_mining_uncapped
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_mining_uncapped
+	}
+	buildings = {
+		x = {
+			building = building_mineral_purification_plant
+		}
+	}
+}
+automate_resource_fill_minerals_district_hab_mining = {
+	category = "planet_automation_minerals"
+	available = {
+		or = {
+			has_district = district_hab_mining
+			num_free_districts = {
+				type = district_hab_mining
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_hab_mining
+	}
+	buildings = {
+		x = {
+			building = building_mineral_purification_plant
+		}
+	}
+}
+automate_resource_fill_food_district_farming = {
+	category = "planet_automation_food"
+	available = {
+		or = {
+			has_district = district_farming
+			num_free_districts = {
+				type = district_farming
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_farming
+	}
+	buildings = {
+		x = {
+			building = building_food_processing_facility
+		}
+	}
+}
+automate_resource_fill_food_district_farming_uncapped = {
+	category = "planet_automation_food"
+	available = {
+		or = {
+			has_district = district_farming_uncapped
+			num_free_districts = {
+				type = district_farming_uncapped
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_farming_uncapped
+	}
+	buildings = {
+		x = {
+			building = building_food_processing_facility
+		}
+	}
+}
+automate_resource_fill_food_district_hab_housing = {
+	category = "planet_automation_food"
+	available = {
+		or = {
+			has_district = district_hab_housing
+			num_free_districts = {
+				type = district_hab_housing
+				value > 0
+			}
+		}
+		has_designation = col_habitat_farming
+	}
+	prio_districts = {
+		district_hab_housing
+	}
+	buildings = {
+		x = {
+			building = building_food_processing_facility
+		}
+	}
+}
+automate_resource_fill_food_district_rw_farming = {
+	category = "planet_automation_food"
+	available = {
+		or = {
+			has_district = district_rw_farming
+			num_free_districts = {
+				type = district_rw_farming
+				value > 0
+			}
+		}
+	}
+	prio_districts = {
+		district_rw_farming
+	}
+	buildings = {
+		x = {
+			building = building_food_processing_facility
+		}
+	}
+}

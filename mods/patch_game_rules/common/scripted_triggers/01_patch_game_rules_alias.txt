@@ -1,0 +1,413 @@
+is_valid_rival = {
+	patch_game_rules_is_valid_rival = yes
+}
+
+can_add_claim = {
+	patch_game_rules_can_add_claim = yes
+}
+
+can_get_claim_from_lost_system = {
+	patch_game_rules_can_get_claim_from_lost_system = yes
+}
+
+species_has_citizenship = {
+	patch_game_rules_species_has_citizenship = yes
+}
+
+should_abduct_pop = {
+	patch_game_rules_should_abduct_pop = yes
+}
+
+species_can_live_on_planet = {
+	patch_game_rules_species_can_live_on_planet = yes
+}
+
+can_vote_in_democratic_election = {
+	patch_game_rules_can_vote_in_democratic_election = yes
+}
+
+can_generate_leader_from_pop = {
+	patch_game_rules_can_generate_leader_from_pop = yes
+}
+
+can_generate_leader_from_species = {
+	patch_game_rules_can_generate_leader_from_species = yes
+}
+
+can_create_espionage_asset_from_species = {
+	patch_game_rules_can_create_espionage_asset_from_species = yes
+}
+
+can_generate_military_leader_from_pop = {
+	patch_game_rules_can_generate_military_leader_from_pop = yes
+}
+
+can_generate_army_from_planet = {
+	patch_game_rules_can_generate_army_from_planet = yes
+}
+
+can_release_vassal = {
+	patch_game_rules_can_release_vassal = yes
+}
+
+can_release_vassal_from_species = {
+	patch_game_rules_can_release_vassal_from_species = yes
+}
+
+can_generate_army_from_species = {
+	patch_game_rules_can_generate_army_from_species = yes
+}
+
+can_modify_species = {
+	patch_game_rules_can_modify_species = yes
+}
+
+subject_can_expand = {
+	patch_game_rules_subject_can_expand = yes
+}
+
+can_take_hostile_actions = {
+	patch_game_rules_can_take_hostile_actions = yes
+}
+
+# is implemented with a different interface in code
+# can_declare_war = {
+# 	patch_game_rules_can_declare_war = yes
+# }
+
+can_colonize_planet = {
+	patch_game_rules_can_colonize_planet = yes
+}
+
+can_colonize_outside_borders = {
+	patch_game_rules_can_colonize_outside_borders = yes
+}
+
+can_terraform_planet = {
+	patch_game_rules_can_terraform_planet = yes
+}
+
+can_colonize_with_pop = {
+	patch_game_rules_can_colonize_with_pop = yes
+}
+
+can_colonize_with_species = {
+	patch_game_rules_can_colonize_with_species = yes
+}
+
+pop_has_random_ethics = {
+	patch_game_rules_pop_has_random_ethics = yes
+}
+
+species_has_happiness = {
+	patch_game_rules_species_has_happiness = yes
+}
+
+can_be_hostile_towards = {
+	patch_game_rules_can_be_hostile_towards = yes
+}
+
+can_species_procreate = {
+	patch_game_rules_can_species_procreate = yes
+}
+
+can_species_be_assembled = {
+	patch_game_rules_can_species_be_assembled = yes
+}
+
+can_orbital_bombard = {
+	patch_game_rules_can_orbital_bombard = yes
+}
+
+can_planet_support_orbital_station = {
+	patch_game_rules_can_planet_support_orbital_station = yes
+}
+
+has_full_sensor_range = {
+	patch_game_rules_has_full_sensor_range = yes
+}
+
+show_notification_for_ground_combat = {
+	patch_game_rules_show_notification_for_ground_combat = yes
+}
+
+should_apply_neighbor_rival_modifier = {
+	patch_game_rules_should_apply_neighbor_rival_modifier = yes
+}
+
+are_rebels_hostile = {
+	patch_game_rules_are_rebels_hostile = yes
+}
+
+should_colony_be_destroyed_on_pc_change = {
+	patch_game_rules_should_colony_be_destroyed_on_pc_change = yes
+}
+
+is_extradimensional_portal = {
+	patch_game_rules_is_extradimensional_portal = yes
+}
+
+is_extradimensional_anchor = {
+	patch_game_rules_is_extradimensional_anchor = yes
+}
+
+will_anger_fallen_empire = {
+	patch_game_rules_will_anger_fallen_empire = yes
+}
+
+can_have_robot_pops = {
+	patch_game_rules_can_have_robot_pops = yes
+}
+
+can_stop_purge_pop_manually = {
+	patch_game_rules_can_stop_purge_pop_manually = yes
+}
+
+can_purge_pop_manually = {
+	patch_game_rules_can_purge_pop_manually = yes
+}
+
+fleet_uses_templates = {
+	patch_game_rules_fleet_uses_templates = yes
+}
+
+can_orbitable_repair_ships = {
+	patch_game_rules_can_orbitable_repair_ships = yes
+}
+
+can_spawn_debris = {
+	patch_game_rules_can_spawn_debris = yes
+}
+
+ai_should_restrict_system = {
+	patch_game_rules_ai_should_restrict_system = yes
+}
+
+can_subjugate_empires = {
+	patch_game_rules_can_subjugate_empires = yes
+}
+
+can_jump_drive = {
+	patch_game_rules_can_jump_drive = yes
+}
+
+can_spawn_occupation_armies = {
+	patch_game_rules_can_spawn_occupation_armies = yes
+}
+
+system_blocks_sensors = {
+	patch_game_rules_system_blocks_sensors = yes
+}
+
+can_enter_system_by_jump = {
+	patch_game_rules_can_enter_system_by_jump = yes
+}
+
+can_resettle_pop = {
+	patch_game_rules_can_resettle_pop = yes
+}
+
+can_country_resettle = {
+	patch_game_rules_can_country_resettle = yes
+}
+
+can_resettle_planet = {
+	patch_game_rules_can_resettle_planet = yes
+}
+
+can_resettle_planet_no_owner_check = {
+	patch_game_rules_can_resettle_planet_no_owner_check = yes
+}
+
+should_spawn_deposits = {
+	patch_game_rules_should_spawn_deposits = yes
+}
+
+is_new_colony = {
+	patch_game_rules_is_new_colony = yes
+}
+
+pop_generates_crime = {
+	patch_game_rules_pop_generates_crime = yes
+}
+
+can_pops_grow_on_planet = {
+	patch_game_rules_can_pops_grow_on_planet = yes
+}
+
+can_pops_assemble_on_planet = {
+	patch_game_rules_can_pops_assemble_on_planet = yes
+}
+
+can_pops_decline_on_planet = {
+	patch_game_rules_can_pops_decline_on_planet = yes
+}
+
+can_force_grow_on_planet = {
+	patch_game_rules_can_force_grow_on_planet = yes
+}
+
+can_force_decline_on_planet = {
+	patch_game_rules_can_force_decline_on_planet = yes
+}
+
+can_force_decline_species = {
+	patch_game_rules_can_force_decline_species = yes
+}
+
+should_force_decline_species = {
+	patch_game_rules_should_force_decline_species = yes
+}
+
+can_build_branch_offices = {
+	patch_game_rules_can_build_branch_offices = yes
+}
+
+can_support_branch_offices = {
+	patch_game_rules_can_support_branch_offices = yes
+}
+
+can_build_branch_office_on_planet = {
+	patch_game_rules_can_build_branch_office_on_planet = yes
+}
+
+is_criminal_syndicate_rule = {
+	patch_game_rules_is_criminal_syndicate_rule = yes
+}
+
+can_crossbreed_species_on_planet = {
+	patch_game_rules_can_crossbreed_species_on_planet = yes
+}
+
+can_crossbreed_species = {
+	patch_game_rules_can_crossbreed_species = yes
+}
+
+can_win_timed_victory = {
+	patch_game_rules_can_win_timed_victory = yes
+}
+
+can_use_galactic_market = {
+	patch_game_rules_can_use_galactic_market = yes
+}
+
+can_be_sold_on_slave_market = {
+	patch_game_rules_can_be_sold_on_slave_market = yes
+}
+
+can_be_part_of_galactic_community = {
+	patch_game_rules_can_be_part_of_galactic_community = yes
+}
+
+can_be_part_of_galactic_empire = {
+	patch_game_rules_can_be_part_of_galactic_empire = yes
+}
+
+can_see_galactic_community = {
+	patch_game_rules_can_see_galactic_community = yes
+}
+
+can_be_part_of_galactic_council = {
+	patch_game_rules_can_be_part_of_galactic_council = yes
+}
+
+must_be_advanced_empire = {
+	patch_game_rules_must_be_advanced_empire = yes
+}
+
+is_allowed_to_be_advanced_empire = {
+	patch_game_rules_is_allowed_to_be_advanced_empire = yes
+}
+
+has_enough_pops_for_necrophage_on_planet = {
+	patch_game_rules_has_enough_pops_for_necrophage_on_planet = yes
+}
+
+can_pop_auto_migrate = {
+	patch_game_rules_can_pop_auto_migrate = yes
+}
+
+can_planet_auto_migrate = {
+	patch_game_rules_can_planet_auto_migrate = yes
+}
+
+can_planet_receive_auto_migration = {
+	patch_game_rules_can_planet_receive_auto_migration = yes
+}
+
+can_gene_mod_habitability = {
+	patch_game_rules_can_gene_mod_habitability = yes
+}
+
+can_add_advanced_traits = {
+	patch_game_rules_can_add_advanced_traits = yes
+}
+
+can_add_negative_traits_organic = {
+	patch_game_rules_can_add_negative_traits_organic = yes
+}
+
+can_remove_positive_traits_organic = {
+	patch_game_rules_can_remove_positive_traits_organic = yes
+}
+
+can_modify_organic_portraits = {
+	patch_game_rules_can_modify_organic_portraits = yes
+}
+
+can_have_first_contact = {
+	patch_game_rules_can_have_first_contact = yes
+}
+
+can_use_envoys_to_raise_imperial_authority = {
+	patch_game_rules_can_use_envoys_to_raise_imperial_authority = yes
+}
+
+can_use_envoys_to_lower_imperial_authority = {
+	patch_game_rules_can_use_envoys_to_lower_imperial_authority = yes
+}
+
+can_fill_drone_job = {
+	patch_game_rules_can_fill_drone_job = yes
+}
+
+can_fill_worker_job = {
+	patch_game_rules_can_fill_worker_job = yes
+}
+
+# already implemented as a trigger
+# can_fill_specialist_job = {
+# 	patch_game_rules_can_fill_specialist_job = yes
+# }
+
+can_fill_ruler_job = {
+	patch_game_rules_can_fill_ruler_job = yes
+}
+
+should_planetary_automate = {
+	patch_game_rules_should_planetary_automate = yes
+}
+
+can_dismiss_leader = {
+	patch_game_rules_can_dismiss_leader = yes
+}
+
+can_country_connect_to_relay_network = {
+	patch_game_rules_can_country_connect_to_relay_network = yes
+}
+
+can_trade_leader = {
+	patch_game_rules_can_trade_leader = yes
+}
+
+can_trade_fleet = {
+	patch_game_rules_can_trade_fleet = yes
+}
+
+is_terraforming_candidate = {
+	patch_game_rules_is_terraforming_candidate = yes
+}
+
+has_ascension_for_terraforming_candidate = {
+	patch_game_rules_has_ascension_for_terraforming_candidate = yes
+}

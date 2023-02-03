@@ -1,0 +1,19 @@
+holding_colony_can_resettle_pop = {
+	# this = pop
+	can_resettle_pop = yes
+	NOT = {
+		has_pop_flag = holding_colony_prevent_resettle_pop
+	}
+}
+
+holding_colony_can_resettle_planet_checked = {
+	# this = planet
+	has_planet_flag = holding_colony_resettle_planet_checked
+}
+
+has_planetary_revolt = {
+	# this = planet
+	any_targeting_situation = {
+		is_situation_type = situation_planetary_revolt
+	}
+}

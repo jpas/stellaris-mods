@@ -1,0 +1,109 @@
+namespace = holding_colony
+
+planet_event = {
+	id = holding_colony.1
+	# triggered by: decision_holding_colony
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		save_global_event_target_as = holding_colony_@owner
+		owner = {
+			set_country_flag = has_holding_colony
+			every_owned_planet = {
+				limit = { NOT = { is_same_value = root } }
+				remove_modifier = holding_colony
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = holding_colony.2
+	# triggered by: decision_abolish_holding_colony
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		clear_global_event_target = holding_colony_@owner
+		owner = {
+			remove_country_flag = has_holding_colony
+			every_owned_planet = {
+				remove_modifier = holding_colony
+			}
+		}
+	}
+}
+
+country_event = {
+	id = holding_colony.3
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = has_holding_colony
+		can_country_resettle = yes
+	}
+
+	immediate = {
+		event_target:holding_colony_@root = {
+			if = {
+				limit = {
+					has_modifier = holding_colony
+					has_planetary_revolt = no
+					can_resettle_planet_no_owner_check = yes
+				}
+				holding_colony_set_resettle_planet_checked = yes
+				holding_colony_prevent_resettle_last_key_pops = yes
+
+				owner = {
+					every_owned_planet = {
+						limit = {
+							NOT = { has_modifier = holding_colony }
+							has_planetary_revolt = no
+							can_resettle_planet_no_owner_check = yes
+						}
+						holding_colony_set_resettle_planet_checked = yes
+
+						planet_event = {
+							id = holding_colony.4
+							scopes = {
+								from = event_target:holding_colony_@root
+								fromfrom = root
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = holding_colony.4
+	# fromfrom = this.owner = holding_colony.owner
+	# from = holding_colony
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		num_sapient_pops > 1
+		holding_colony_can_resettle_planet_checked = yes
+	}
+
+	immediate = {
+		holding_colony_prevent_resettle_last_key_pops = yes
+
+		every_owned_pop = {
+			limit = {
+				holding_colony_can_resettle_pop = yes
+				is_unemployed = yes
+			}
+			resettle_pop = { pop = this planet = from }
+		}
+	}
+}

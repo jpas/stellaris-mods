@@ -1,0 +1,27 @@
+non_free_pop_rights_can_resettle_pop = {
+	if = {
+		limit = { is_enslaved = yes }
+		always = yes
+	}
+	else = {
+		patch_game_rules_can_resettle_pop = yes
+	}
+}
+
+non_free_pop_rights_can_country_resettle = {
+	OR = {
+		any_owned_species = {
+			has_citizenship_type = { country = prev type = citizenship_slavery }
+		}
+		patch_game_rules_can_country_resettle = yes
+	}
+}
+
+
+non_free_pop_rights_can_resettle_planet = {
+	owner = {
+		non_free_pop_rights_can_country_resettle = yes
+	}
+	patch_game_rules_can_resettle_planet_no_owner_check = yes
+}
+
