@@ -1,6 +1,7 @@
 import io
 
 from abc import ABC
+from copy import deepcopy
 
 
 __all__ = [
@@ -56,18 +57,18 @@ class Exps(Node):
     def __iter__(self):
         yield from self._exps
 
-    def __getitem__(self, key):
+    def _get_statement(self, key):
         match key:
-            case tuple((k, i)):
-                key, n = k, i
+            case tuple((k, j)):
+                key, i = k, j
             case k:
-                key, n = k, 0
+                key, i = k, 0
 
         # XXX: can be done in O(1) if we keep track of:
         #      - key, i |-> exps[i]
         # XXX: can do negative indexing in O(1) if we also keep track of:
         #      - key |-> number of exps using key
-
+        j = i
         has_key = False
         for exp in self._exps:
             match exp:
@@ -76,21 +77,29 @@ class Exps(Node):
                         continue
 
                     has_key = True
-                    if n >= 1:
-                        n -= 1
+                    if j >= 1:
+                        j -= 1
                         continue
 
-                    return v
+                    return exp
 
         if has_key:
             raise KeyError(key)
         else:
-            raise IndexError(key)
+            raise IndexError(i)
 
 
-    def get(self, key, i=0, default=None):
+    def set(self, key, value, i=0):
+        statement = self._get_statement(key)
+        statement.right = value
+
+    def __getitem__(self, key):
+        statement = self._get_statement(key)
+        return statement.right
+
+    def get(self, key, default=None):
         try:
-            return self[key, i]
+            return self[key]
         except (KeyError, IndexError):
             return default
 
