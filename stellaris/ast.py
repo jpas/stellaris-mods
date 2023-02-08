@@ -54,6 +54,12 @@ class Exps(Node):
                 case Statement(Label(l), _, _):
                     yield l
 
+    def __len__(self):
+        return sum(not isinstance(e, Comment) for e in self._exps)
+
+    def __bool__(self):
+        return len(self) != 0
+
     def __iter__(self):
         yield from self._exps
 
