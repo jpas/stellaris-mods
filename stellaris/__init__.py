@@ -100,8 +100,9 @@ class Patcher:
 
         return written
 
-    def localize(self, prefix, key, loc, language='english'):
-        self._localization[prefix, language][key] = loc
+    def localize(self, prefix, locs, language='english'):
+        for key, loc in locs:
+            self._localization[prefix, language][key] = loc
 
 
 _patcher = Patcher('~/.local/share/Steam/steamapps/common/Stellaris')
